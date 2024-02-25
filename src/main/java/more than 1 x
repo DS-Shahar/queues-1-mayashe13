@@ -1,0 +1,16 @@
+	public static boolean rezef(Queue<Integer>q1, int x)
+	{
+		boolean b = false;
+		q1.insert(null);
+		while(q1.head()!=null)
+		{
+			q1.insert(q1.head());
+			if(q1.remove()==x)
+			{
+				if(q1.head()==x)
+					b = true;
+			}
+		}
+		return b;
+	}
+\\מקבלת תור ומספר ובודקץ אם יש רצף של המספר הזה של יותר מ1
