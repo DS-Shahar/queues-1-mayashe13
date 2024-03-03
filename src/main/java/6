@@ -1,0 +1,18 @@
+	public static void q6(Queue<Job>q, int time)
+	{
+		while(!q.isEmpty())
+		{
+			if(time>0)
+			{
+				if(q.head().getSec()<=time)
+				{
+					System.out.println(q.head().getCode());
+					time = time-(q.remove().getSec());
+				}
+				else
+				{
+					time = 0;
+				}
+			}
+		}
+	}
